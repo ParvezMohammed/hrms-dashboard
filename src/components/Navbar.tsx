@@ -8,15 +8,9 @@ import {
   import searchIcon from "../assets/search-icon.svg";
   import profileImage from "../components/profile.png";
   import { useState } from "react";
-  import { useNavigate } from "react-router-dom";
   
   export const Navbar = ({ heading }) => {
-    const navigate = useNavigate();
     const [isOpen, setOpen] = useState(false);
-  
-    const handleNotification = () => {
-      navigate("/notification");
-    };
   
     return (
       <div className="flex justify-between items-center mb-4 relative">
@@ -44,10 +38,7 @@ import {
   
           {/* Notification Icon */}
           <div className="border rounded-lg p-2.5 cursor-pointer">
-            <FaBell
-              className="text-gray-600 text-xl"
-              onClick={handleNotification}
-            />
+            <FaBell className="text-gray-600 text-xl"/>
           </div>
   
           {/* Profile Dropdown */}

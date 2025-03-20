@@ -11,7 +11,6 @@ import PasswordUpdate from './components/PasswordUpdate';
 import TrackUser from './components/TrackUser';
 import TrackProfile from './components/TrackProfile';
 import Settings from './components/Settings';
-import Notification from './components/Notification';
 
 function App() {
   return (
@@ -30,7 +29,6 @@ function App() {
               <Route path="/user-activity" element={<TrackUser />} />
               <Route path="/track-profile" element={<TrackProfile />} />
               <Route path="/settings" element={<Settings />} />
-              <Route path="/notification" element={<Notification />} />
             </Routes>
           </main>
         </div>
