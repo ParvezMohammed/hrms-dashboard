@@ -8,8 +8,13 @@ import {
   import searchIcon from "../assets/search-icon.svg";
   import profileImage from "../components/profile.png";
   import { useState } from "react";
+  import { useNavigate } from "react-router-dom";
   
   export const Navbar = ({ heading }) => {
+    const navigate = useNavigate();
+    const handleNotification = () => {
+      navigate("/notification");
+    };
     const [isOpen, setOpen] = useState(false);
   
     return (
@@ -38,7 +43,7 @@ import {
   
           {/* Notification Icon */}
           <div className="border rounded-lg p-2.5 cursor-pointer">
-            <FaBell className="text-gray-600 text-xl"/>
+            <FaBell onClick={() => handleNotification()} className="text-gray-600 text-xl"/>
           </div>
   
           {/* Profile Dropdown */}
